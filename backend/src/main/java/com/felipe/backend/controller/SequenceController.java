@@ -8,15 +8,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.websocket.server.PathParam;
-
 @RestController
+@RequestMapping(path="/api/v1")
 public class SequenceController {
     @Autowired
     ServiceFactory serviceFactory;
 
     @ApiOperation(value = "Retorna o valor da sequencia Alticci para o indice n")
-    @RequestMapping(value="alticci/{n}", method = RequestMethod.GET, produces="application/json")
+    @RequestMapping(path="/alticci/{n}", method = RequestMethod.GET, produces="application/json")
     public Double getAlticci(@PathVariable Integer n){
         return serviceFactory.getSequenceGenerator().getNumberFromAlticci(n);
     }

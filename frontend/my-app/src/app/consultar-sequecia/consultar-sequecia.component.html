@@ -1,0 +1,23 @@
+<div class="content" role="main">
+    <!-- Resources -->
+    <h2>Sequencia Alticci</h2>
+    <p>Abaixo você pode consultar um valor da sequencia Alticci:</p>
+  
+    <div class="card-container">
+      <input class="card-input" name="cardIndex" type="number" [(ngModel)]="indexContent" />
+      <a class="card" (click)="getValueFromAlticci()">
+        <span>Consultar</span>
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </a>
+      <a class="card">
+        <table>
+            <caption>Resultado</caption>
+            <tbody>
+                <tr>
+                    <td>Valor( {{ valueContent }} )</td>
+                </tr>
+            </tbody>
+        </table>
+      </a>
+    </div>
+  </div>
